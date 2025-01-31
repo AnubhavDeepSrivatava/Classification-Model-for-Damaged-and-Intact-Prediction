@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 
 # Load the trained model (ensure the correct model path)
 import gdown
-url = "https://drive.google.com/uc?id=YOUR_FILE_ID"  # Replace with actual ID
+url = "https://drive.google.com/file/d/1emFBZipAFq4z5TnJQuyyaHUvG3eTvoKx/view?usp=sharing"  # Replace with actual ID
 output = "resnet34_model.h5"
 gdown.download(url, output, quiet=False)
 model = load_model("resnet34_model.h5")
