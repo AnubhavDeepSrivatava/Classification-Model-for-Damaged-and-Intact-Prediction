@@ -4,6 +4,8 @@ import tensorflow as tf
 import streamlit as st
 import os
 import gdown
+from tensorflow.keras.models import load_model
+
 
 # Define the path to the model
 MODEL_PATH = "resnet34_model.h5"
