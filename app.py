@@ -5,8 +5,12 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 
 # Load the trained model (ensure the correct model path)
-MODEL_PATH = "resnet34_model.h5"  # Update if needed
-model = load_model(MODEL_PATH)
+import gdown
+url = "https://drive.google.com/uc?id=YOUR_FILE_ID"  # Replace with actual ID
+output = "resnet34_model.h5"
+gdown.download(url, output, quiet=False)
+model = load_model("resnet34_model.h5")
+
 
 # Define image preprocessing function
 def preprocess_image(frame, img_size=(256, 256)):
