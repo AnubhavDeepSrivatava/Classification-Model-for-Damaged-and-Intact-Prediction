@@ -3,6 +3,9 @@ import numpy as np
 import tensorflow as tf
 import streamlit as st
 from tensorflow.keras.models import load_model
+import os
+MODEL_PATH = os.path.join(os.getcwd(), "model.h5")
+model = load_model(MODEL_PATH)
 
 # Load the trained model (ensure the correct model path)
 import gdown
